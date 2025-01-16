@@ -1,32 +1,24 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+    # Mike 
+    # https://leetcode.com/problems/reverse-integer/
+    def reverse(self, x: int) -> int:
+            queue = []
+            mul = -1 if x < 0 else 1
+            x = -x if x < 0 else x
 
-    def merge(self, list1, list2):
-        curr = dummy = ListNode()
-        while list1 and list2:
-            if list1.val <= list2.val:
-                curr.next = list1
-                list1, curr = list1.next, list1
-            else:
-                curr.next = list2
-                list2, curr = list2.next, list2
+            while x != 0:
+                queue.append(x % 10)
+                x = x // 10
 
-        if list1 or list2:
-            curr.next = list1 if list1 else list2
+            res = 0
+            while queue:
+                n = len(queue)
+                front = queue.pop(0)
+                res += pow(10, n - 1) * front
+
+            # NOTE: This problem requires us to have <= 2^31 - 1
+            if res > pow(2, 31) - 1:
+                return 0
+
+            return res * mul
         
-        return dummy.next
-
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        if len(lists) == 0:
-            return None
-    
-        while len(lists) > 1:
-            l1 = lists.pop()
-            l2 = lists.pop()
-            lists.append(self.merge(l1, l2))
-
-        return lists[0]

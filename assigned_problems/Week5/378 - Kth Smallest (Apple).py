@@ -1,8 +1,5 @@
 class Solution:
-    # Mike - Meta
-    #https://leetcode.com/problems/next-permutation/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-    def nextPermutation(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
+    # Saman - Apple
+    #https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
         

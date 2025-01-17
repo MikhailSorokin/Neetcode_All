@@ -1,4 +1,6 @@
 class Solution:
+    # daniel's solution
+    # https://leetcode.com/problems/candy-crush/submissions/1511435350/
     def candyCrush(self, board: List[List[int]]) -> List[List[int]]:
         m = len(board) # num rows
         n = len(board[0]) # num columns

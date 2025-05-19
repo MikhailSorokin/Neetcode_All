@@ -1,5 +1,6 @@
 from collections import deque, defaultdict
 
+# https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/description/
 class Solution:
     def minScore(self, n: int, roads: List[List[int]]) -> int:
         paths = deque()

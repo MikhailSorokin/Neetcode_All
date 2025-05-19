@@ -1,5 +1,6 @@
 from collections import Counter
 
+# https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/description/
 class Solution:
     def numberOfSubstrings(self, s: str) -> int:
         n = len(s)

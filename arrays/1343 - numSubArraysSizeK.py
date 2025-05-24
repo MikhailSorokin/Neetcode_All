@@ -1,4 +1,6 @@
 class Solution:
+    # 1343 - Number of sub-arrays of size k
+    # https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/submissions/1642084700/
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         res = 0
         i = 0
